@@ -1,0 +1,23 @@
+{
+  "name": "bldexp",
+  "version": "1.0.0",
+  "description": "Building Expenses Application Management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioncakephper/BldExp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ioncakephper/BldExp/issues"
+  },
+  "homepage": "https://github.com/ioncakephper/BldExp#readme",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "path": "^0.12.7"
+  }
+}

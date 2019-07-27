@@ -1,0 +1,93 @@
+{
+    "relations": [
+        {
+            "entity": "Apartment",
+            "hasMany": [
+                "Tenant",
+                "Invoice",
+                "Payment"
+            ],
+            "belongsTo": [
+                "Building",
+                "BuildingUnit",
+                "BuildingLayout"
+            ]
+        },
+        {
+            "entity": "Payment",
+            "belongsTo": [
+                "Invoice"
+            ]
+        },
+        {
+            "entity": "BuildingLayout",
+            "belongsTo": [
+                "Building",
+                "Layout"
+            ]
+        }
+    ],
+    "entities": [
+        {
+            "entity": "Apartment",
+            "description": "Contains apartment records",
+            "fields": [
+                {
+                    "field": "Number",
+                    "label": "Apartment Number",
+                    "type": "Integer",
+                    "width": 5,
+                    "unique": true,
+                    "required": true,
+                    "validators": [
+                        {
+                            "regex": "/^[0-9]+$/",
+                            "message": "Expecting digital characters only."
+                        }
+                    ]
+                },
+                {
+                    "field": "Level",
+                    "type": "dropdown",
+                    "options": [
+                        "First option | 0",
+                        "Second option | 1",
+                        "Third option | 2"
+                    ]
+                }
+            ]
+        },
+        {
+            "entity": "Tenant"
+        },
+        {
+            "entity": "Invoice"
+        },
+        {
+            "entity": "Payment"
+        },
+        {
+            "entity": "Building"
+        },
+        {
+            "entity": "Layout",
+            "fields": [
+                {
+                    "field": "name",
+                    "type": "text",
+                    "required": true,
+                    "width": 50,
+                    "description": "Layout name",
+                    "unique": true
+                },
+                {
+                    "field": "description",
+                    "type": "textarea",
+                    "required": false,
+                    "width": 500,
+                    "description": "Layout description"
+                }
+            ]
+        }
+    ]
+}
